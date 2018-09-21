@@ -1,0 +1,38 @@
+ html, body{
+    height:100%; /* important to vertically align the container */
+    margin:0;
+    padding:0;
+}
+
+body {
+	background-color: #17A2B8;
+   	font-family: 'Lobster';
+}
+
+.page-header {
+    background-color: #9932CC;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1 {
+    color: #ffffff;
+    font-family: 'Lobster';
+}
+
+.info .container #info-row #info-column #info-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 300px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+  text-align: center;
+}
+
+.footer h5 {
+	position:relative;
+	float: right;
+	bottom: 0px;
+	right: 0px;
+	z-index: 999;
+}
