@@ -10,6 +10,7 @@ body {
     background-color: #9932CC;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    text-align: center;
 }
 
 .page-header h1 {
@@ -21,6 +22,7 @@ body {
 #frm {
   height: 270px;
   margin-top: 100px;
+  text-align: center;
 }
 
 .footer h5 {
