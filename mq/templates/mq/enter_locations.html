@@ -12,27 +12,18 @@
     </head>
 	<body>
 		<div class= "page-header"><h1>Welcome to Directions Retrieval!</h1></div>
-		<div class = "info">
-			<div class = "container">
-				<div id="info-row" class="row justify-content-center align-items-center">
-					<div id="info-column" class="col-md-6">
-						<div id="info-box" class="col-md-12">
-							<h2>Please enter the start and end locations.</h2>
-							<form action="/your-name/" method="post">
-							    {% csrf_token %}
-							    <div class="text-center form-group">
-							   		{{ form.as_p }}
-							   	</div>
-							    <div class="text center form-group">
-							    	<input type="submit" value="Submit">
-							    </div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div id = "frm">
+			<h2>Please enter the start and end locations.</h2>
+			<form action="/your-name/" method="post">
+			    {% csrf_token %}
+			    <div class="text-center form-group">
+			   		{{ form.as_p }}
+			   	</div>
+			    <div class="text center form-group">
+			    	<input type="submit" value="Submit">
+			    </div>
+			</form>
 		</div>
-
 		<div class = "footer">
 			<h5>All directions retrieved from MapQuest.</h5>
 		</div>

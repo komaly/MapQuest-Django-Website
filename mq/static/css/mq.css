@@ -1,12 +1,9 @@
- html, body{
-    height:100%; /* important to vertically align the container */
-    margin:0;
-    padding:0;
-}
-
 body {
 	background-color: #17A2B8;
-   	font-family: 'Lobster';
+  font-family: 'Lobster';
+  align-items: center;
+  text-align: center;
+
 }
 
 .page-header {
@@ -18,21 +15,16 @@ body {
 .page-header h1 {
     color: #ffffff;
     font-family: 'Lobster';
+    text-align: center;
 }
 
-.info .container #info-row #info-column #info-box {
-  margin-top: 120px;
-  max-width: 600px;
-  height: 300px;
-  border: 1px solid #9C9C9C;
-  background-color: #EAEAEA;
-  text-align: center;
+#frm {
+  height: 270px;
+  margin-top: 100px;
 }
 
 .footer h5 {
 	position:relative;
-	float: right;
-	bottom: 0px;
-	right: 0px;
-	z-index: 999;
+	bottom: -60px;
+	
 }
