@@ -10,10 +10,11 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="{% static 'css/mq.css' %}">
 		<link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+	
         <title>Directions Retrieval</title>
     </head>
 	<body style="background-image: url('{% static "img/background.jpg"%}')";>
-		<div class= "page-header" style="background-image: url('{% static "img/header.jpg"%}')";>
+		<div class= "page-header" autocomplete="off" style="background-image: url('{% static "img/header.jpg"%}')";>
 			{% if messages %}
 				<ul class="messages">
 					{% for message in messages %}
@@ -25,7 +26,7 @@
 		</div>
 		<div id = "frm">
 			<h2>Please enter the start and end locations.</h2>
-			<form action="/directions/" method="post">
+			<form action="/directions/" method="post" autocomplete="off" id = "myform">
 			    {% csrf_token %}
 			    <div class="text-center form-group">
 			   		{{ form.as_p }}
