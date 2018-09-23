@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/mq.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+	<title>Directions</title>
+</head>
+<body style="background-image: url('{% static "img/background.jpg"%}')";>
+	<div class= "page-header" style="background-image: url('{% static "img/header.jpg"%}')";>
+		<h1>{{start}} to {{end}}</h1>
+	</div>
+
+	<div id = "display">
+		<div id = "directions">
+			<h3>Directions</h3>
+			{%  for step in steps %}
+				<h4>{{step}}</h4>
+			{% endfor %}
+
+			<h5>Directions Courtesy of MapQuest: Map Data Copyright OpenStreetMap Contributors</h5>
+		</div>
+		
+		<div id = "details">
+			<h3>Total Distance:</h3>
+			<h4>{{totaldistance}} miles</h4>
+			<h3>Total Time:</h3>
+			<h4>{{totaltime}} minutes</h4>
+			<h3>Coordinates of {{start}}:</h3>
+			<h4>{{startlatlong}}</h4>
+			<h3>Coordinates of {{end}}:</h3>
+			<h4>{{endlatlong}}</h4>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

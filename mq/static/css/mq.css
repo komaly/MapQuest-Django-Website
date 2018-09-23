@@ -1,21 +1,23 @@
 body {
-	background-color: #17A2B8;
-  font-family: 'Lobster';
-  align-items: center;
-  text-align: center;
-
+  font-family: 'Oleo Script', cursive;
+  background-size: 1300px 600px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
 }
 
 .page-header {
-    background-color: #9932CC;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
     text-align: center;
+    background-size: 1300px 600px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
 }
 
 .page-header h1 {
-    color: #ffffff;
-    font-family: 'Lobster';
+    font-family: 'Oleo Script', cursive;
     text-align: center;
 }
 
@@ -25,8 +27,17 @@ body {
   text-align: center;
 }
 
-.footer h5 {
-	position:relative;
-	bottom: -60px;
-	
+
+#display #directions  {
+  float: left;
+  text-align: center;
+}
+
+#display #details{
+  float: right;
+  text-align: center;
+}
+
+h3 {
+  text-decoration: underline;
 }

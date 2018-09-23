@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 {% load static %}
 <html>
 	<head>
@@ -7,25 +9,31 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="{% static 'css/mq.css' %}">
-		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
         <title>Directions Retrieval</title>
     </head>
-	<body>
-		<div class= "page-header"><h1>Welcome to Directions Retrieval!</h1></div>
+	<body style="background-image: url('{% static "img/background.jpg"%}')";>
+		<div class= "page-header" style="background-image: url('{% static "img/header.jpg"%}')";>
+			{% if messages %}
+				<ul class="messages">
+					{% for message in messages %}
+						 <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+				    {% endfor %}
+				</ul>
+			{% endif %}
+			<h1>Welcome to Directions Retrieval!</h1>
+		</div>
 		<div id = "frm">
 			<h2>Please enter the start and end locations.</h2>
-			<form action="/your-name/" method="post">
+			<form action="/directions/" method="post">
 			    {% csrf_token %}
 			    <div class="text-center form-group">
 			   		{{ form.as_p }}
 			   	</div>
 			    <div class="text center form-group">
-			    	<input type="submit" value="Submit">
+			    	<input type="submit" class="btn" value="Submit">
 			    </div>
 			</form>
-		</div>
-		<div class = "footer">
-			<h5>All directions retrieved from MapQuest.</h5>
 		</div>
 	</body>
 </html>
