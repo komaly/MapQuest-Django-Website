@@ -3,9 +3,9 @@ information from the parsed json output'''
 
 import json
 
+'''Searches json and prints step by step directions for the route to the location(s)'''
 class Steps:
     def generate(self, json: 'json'):
-        '''Searches json and prints step by step directions for the route to the location(s)'''
         routed = []
         print('\nSTEPS')
         for item in json:
@@ -15,26 +15,26 @@ class Steps:
                     routed.append(subitem["narrative"])
         return routed
 
+'''Searches json and prints the total distance travelled'''
 class TotalDistance:
     def generate(self, json:'json'):
-        '''Searches json and prints the total distance travelled'''
         distance = 0
         for element in json:
             distance += element["route"]["distance"]
         return round(distance)
 
+'''Searches json and calculates and prints the times it takes to travel the route'''
 class TotalTime:
     def generate(self, json:'json'):
-        '''Searches json and calculates and prints the times it takes to travel the route'''
         time = 0
         for element in json:
             time += element["route"]["time"]/60
             
         return round(time)
 
+ '''Searches json and prints the latitude/longtitude for each location'''
 class LatLong:
     def generate(self, json:'json'):
-        '''Searches json and prints the latitude/longtitude for each location'''
         lat_long = []
         for element in json:
           json_text = element["route"]["locations"]

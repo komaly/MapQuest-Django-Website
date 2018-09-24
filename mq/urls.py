@@ -1,3 +1,7 @@
+'''
+Specifies allowed URLs for the website.
+'''
+
 from django.urls import path
 from . import views
 

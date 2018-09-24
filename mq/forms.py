@@ -1,3 +1,7 @@
+'''
+Creates the form for the user to input the starting 
+and ending locations.
+'''
 from django import forms
 
 class LocationsForm(forms.Form):

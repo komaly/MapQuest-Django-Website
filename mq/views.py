@@ -1,3 +1,8 @@
+'''
+Views.py contains the logic for the website. Each function is for 
+a page in the website. 
+'''
+
 from .forms import LocationsForm
 from django.shortcuts import render
 from mq.utils.mapquest_module import *
@@ -6,10 +11,14 @@ from django.contrib import messages
 
 form = LocationsForm()
 
-# Create your views here.
+'''Sends the form to the html page to be displayed'''
 def get_locations(request):
     return render(request, 'mq/enter_locations.html', {'form': form})
 
+'''Uses the information from the form to build a url and retrieve the JSON
+data from it. Crawls through JSON data to retrieve directions, total
+distance, total time, and the latitudes and longitudes of the start and
+end locations. Sends this information to an html page to be displayed.'''
 def display_directions(request):
 	if request.method == 'POST':
 		form = LocationsForm(request.POST)
