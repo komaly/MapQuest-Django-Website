@@ -32,7 +32,7 @@ class TotalTime:
             
         return round(time)
 
- '''Searches json and prints the latitude/longtitude for each location'''
+'''Searches json and prints the latitude/longtitude for each location'''
 class LatLong:
     def generate(self, json:'json'):
         lat_long = []
