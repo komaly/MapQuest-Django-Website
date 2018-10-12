@@ -5,4 +5,5 @@ by crawling through the information from the JSON result.
 
 The website was created by utilizing the Django web framework. 
 
+The website is located at the following URL: http://komaly.pythonanywhere.com
 
